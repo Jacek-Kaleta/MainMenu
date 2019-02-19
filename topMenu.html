@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="topMenu.css">
+    <script type="text/javascript" language="javascript" src="topMenu.js"></script>
+    <script type="text/javascript" language="javascript" src="topMenuCreator.js"></script>
+</head>
+<script>
+    function ocOpen() {
+        alert("Open clicked");
+    }
+
+    function ocSave() {
+        alert("Save clicked");
+    }
+
+    let filesubmenu = [];
+    filesubmenu.push({
+        title: "Open",
+        onclick: "ocOpen"
+    });
+    filesubmenu.push({
+        title: "Save",
+        onclick: "ocSave"
+    });
+
+    let menu = [{
+        pad: "20"
+    }, {
+        title: "File",
+        submenu: filesubmenu,
+        width: 300
+    }, {
+        title: "View",
+        width: 200,
+        submenu: [{
+            title: "Forms"
+        }]
+    }, {
+        pad: "20"
+    }, {
+        title: "Components",
+        submenu: [{
+            title: "Buttons"
+        }, {
+            title: "Labels"
+        }]
+    }]
+</script>
+
+<body>
+    <div id="menu">
+        <!--<div class="navpos">
+            <div class="navbar noselect">
+                <div class="mmpad p20"></div>
+                <div class="mmenu">
+                    <div class="menupos" onclick="swFile(this);" onmouseover="showsubmenu(this)">File</div>
+                    <div class="subdiv">
+                        <div class="subele" onclick="hideall();oc001();">Open</div>
+                        <div class="subele">Save</div>
+                        <div class="subele">Print </div>
+                        <div class="subele">Quit </div>
+                    </div>
+                </div>
+                <div class="mmenu">
+                    <div class="menupos" onclick="swFile(this);" onselectstart="ds();" onmouseover="showsubmenu(this)">View</div>
+                    <div class="subdiv">
+                        <div class="subele">Users</div>
+                        <div class="subele">Groups</div>
+                        <div class="subele">Aliases </div>
+                    </div>
+                </div>
+                <div class="mmpad fr p40"></div>
+                <div class="mmenu fr">
+                    <div class="menupos" onclick="swFile(this);" onmouseover="showsubmenu(this)">Composition</div>
+                    <div class="subdiv">
+                        <div class="subele ">Colors</div>
+                        <div class="subele ">Formats</div>
+                        <div class="subele ">Directions </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        -->
+    </div>
+    <script>
+        document.onreadystatechange = function() {
+            if (document.readyState === "complete") {
+                createMenu(menu);
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+body {
+    background-color: #1e1e1e;
+}
+
+.navpos {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    width: 95%;
+    height: 50px;
+}
+
+.navbar {
+    background-color: #333333;
+    display: block;
+    height: 45px;
+    width: 100%;
+    position: absolute;
+}
+
+.mmenu {
+    height: 45px;
+    float: left;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 12px;
+    padding-left: 0px;
+    margin-right: 4px;
+    font-family: Century Gothic;
+    font-size: 18px;
+    color: #cccccc;
+}
+
+.mmpad {
+    height: 45px;
+    float: left;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 12px;
+    padding-left: 0px;
+    margin-right: 4px;
+    font-family: Century Gothic;
+    font-size: 18px;
+    color: #cccccc;
+}
+
+.p10 {
+    width: 10px;
+}
+
+.p20 {
+    width: 20px;
+}
+
+.p30 {
+    width: 30px;
+}
+
+.p40 {
+    width: 40px;
+}
+
+.p50 {
+    width: 50px;
+}
+
+.p60 {
+    width: 60px;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.mmenupos:hover {
+    color: white;
+    font-weight: bold;
+}
+
+.menupos {
+    position: relative;
+    padding-left: 10px;
+    line-height: 40px;
+    height: 40px;
+    cursor: context-menu;
+}
+
+.mmenu:hover {
+    background-color: #474748;
+}
+
+.subdiv {
+    display: none;
+    top: 44px;
+    position: absolute;
+    background-color: #252526;
+    -webkit-box-shadow: 13px 13px 13px 3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 13px 13px 13px 3px rgba(0, 0, 0, 0.75);
+    box-shadow: 13px 13px 13px 3px rgba(0, 0, 0, 0.75);
+    transition: transform 50ms ease;
+    transition-property: transform;
+    transition-duration: 50ms;
+    transition-timing-function: ease;
+    transition-delay: initial;
+}
+
+.onoff {
+    display: block;
+}
+
+.subele {
+    position: static;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 30px;
+    vertical-align: middle;
+    transition: transform 50ms ease;
+    transition-property: transform;
+    transition-duration: 50ms;
+    transition-timing-function: ease;
+    transition-delay: initial;
+}
+
+.subele:hover {
+    background-color: #094771;
+    cursor: context-menu;
+    font-weight: bold;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
