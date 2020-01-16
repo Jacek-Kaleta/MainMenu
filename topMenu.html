@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="topMenu.css">
@@ -15,47 +16,37 @@
         alert("Save clicked");
     }
 
-    let filesubmenu = [];
-    filesubmenu.push({
-        title: "Open",
-        onclick: "ocOpen"
-    });
-    filesubmenu.push({
-        title: "Save",
-        onclick: "ocSave"
-    });
-
-    let menu = [{
-        pad: "20"
-    }, {
-        title: "File",
-        submenu: filesubmenu,
-        width: 300
-    }, {
-        title: "View",
-        width: 200,
-        submenu: [{
-            title: "Forms"
-        }]
-    }, {
-        pad: "20"
-    }, {
-        title: "Components",
-        submenu: [{
-            title: "Buttons"
-        }, {
-            title: "Labels"
-        }]
-    }]
+    function makeMenu() {
+        mainMenu.init();
+        mainMenu.addItem("File", 300); {
+            mainMenu.addSubItem("Open", "ocOpen");
+            mainMenu.addSubItem("Save", "ocSave");
+            mainMenu.addSubItem("Quit",
+                function() {
+                    alert("Quit")
+                });
+        }
+        mainMenu.addItem("View", 300); {
+            mainMenu.addSubItem("Output", function() {
+                alert("Output")
+            });
+            mainMenu.addSubItem("Debug", function() {
+                alert("Debug")
+            });
+        }
+        mainMenu.addPad();
+        mainMenu.addItem("Components", 300);
+        mainMenu.create();
+    }
 </script>
 
 <body>
-    <div id="menu">      
+    <div id="menu">
     </div>
     <script>
         document.onreadystatechange = function() {
             if (document.readyState === "complete") {
-                createMenu(menu);
+                makeMenu(menu);
             }
         }
     </script>
