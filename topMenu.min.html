@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="topMenu.css">
+    <script type="text/javascript" language="javascript" src="topMenu.min.js"></script>
+    <script type="text/javascript" language="javascript" src="topMenuCreator.min.js"></script>
+</head>
+<script>
+    function ocOpen() {
+        alert("Open clicked");
+    }
+
+    function ocSave() {
+        alert("Save clicked");
+    }
+
+    function makeMenu() {
+        mainMenu.init();
+        mainMenu.addItem("File", 300); {
+            mainMenu.addSubItem("Open", "ocOpen");
+            mainMenu.addSubItem("Save", "ocSave");
+            mainMenu.addSubItem("Quit",
+                function() {
+                    alert("Quit")
+                });
+        }
+        mainMenu.addItem("View", 300); {
+            mainMenu.addSubItem("Output", function() {
+                alert("Output")
+            });
+            mainMenu.addSubItem("Debug", function() {
+                alert("Debug")
+            });
+        }
+        mainMenu.addPad();
+        mainMenu.addItem("Components", 300);
+        mainMenu.create();
+    }
+</script>
+
+<body>
+    <div id="menu">
+    </div>
+    <script>
+        document.onreadystatechange = function() {
+            if (document.readyState === "complete") {
+                makeMenu(menu);
+            }
+        }
+    </script>
+</body>
+
+</html>
